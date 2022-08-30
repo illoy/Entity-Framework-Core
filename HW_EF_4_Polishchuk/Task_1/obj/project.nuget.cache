@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ik0GzUDaom6lUQKIEcwUAukHxwoHXku5IM5kNFkky0MPXc1mKOuHT/gaANEQYguNrIS47zeRxxg5iayyRbLQvA==",
+  "dgSpecHash": "F4l5R8dDT08rRLxGB682ySoHNG0VKt70LlVPsJZw5Vi0fXMx8Mk+Np4svSkL4jCs9WNqMfCOMoxJ3uEPHq3rEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\38098\\source\\repos\\HW_EF_4_Polishchuk\\Task_1\\Task_1.csproj",
+  "projectFilePath": "C:\\Users\\38098\\Source\\Repos\\Entity-Framework-Core\\HW_EF_4_Polishchuk\\Task_1\\Task_1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\38098\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\38098\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

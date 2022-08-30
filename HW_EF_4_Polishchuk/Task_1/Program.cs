@@ -49,19 +49,29 @@ if (!pc.Countries.Any() && !pc.Companies.Any() && !pc.Products.Any())
     pc.SaveChanges();
 }
 
-Console.Write("Enter Product Id: ");
-int num = Convert.ToInt32(Console.ReadLine());
-var x = new SqlParameter("@Id", num);
+await AsyncMethod();
 
-var productData = pc.Products.FromSqlRaw("ProductData @Id", x);
-
-foreach (var product in productData)
+async Task AsyncMethod()
 {
-    Console.WriteLine($"id - {product.Id},\n" +
-                        $"Name - {product.Name},\n" +
-                        $"Product price - {product.Price},\n" +
-                        $"CompanyId - {product.CompanyId},\n"
-                        );
+    Console.Write("Enter Product Id: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+
+    await Task.Run(() => ShowData(num));
 }
 
+void ShowData(int num)
+{
+    var x = new SqlParameter("@Id", num);
+
+    var productData = pc.Products.FromSqlRaw("ProductData @Id", x);
+
+    foreach (var product in productData)
+    {
+        Console.WriteLine($"id - {product.Id},\n" +
+                            $"Name - {product.Name},\n" +
+                            $"Product price - {product.Price},\n" +
+                            $"CompanyId - {product.CompanyId},\n"
+                            );
+    }
+}
 
